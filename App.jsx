@@ -6,7 +6,13 @@ import React from 'react'
 // import Styling from './src/components/styling'
 // import MyFlatList from './src/components/flatList'
 // import MySectionList from './src/components/mySectionList'
-import LoginForm from './src/components/loginForm'
+// import LoginForm from './src/components/loginForm'
+// import Contact from './src/screens/contact/contact'
+// import Grid from './src/components/grid'
+// import ClassComponent from './src/components/classComponent'
+// import UseEffectHook from './src/components/useEffectHook'
+// import HideShowToggle from './src/components/hideShowToggle'
+import Loader from './src/components/loader'
 
 const App = () => {
 
@@ -17,7 +23,7 @@ const App = () => {
   //   }
 
   return (
-    <View>
+    <View style={{flex:1}}>
 
       {/* <Text style = {{ fontSize: 40, backgroundColor: "yellow", marginBottom: 30 }}>First Project </Text>
 
@@ -35,7 +41,19 @@ const App = () => {
 
       {/* <MySectionList/> */}
 
-      <LoginForm/>
+      {/* <LoginForm/> */}
+
+      {/* <Contact/> */}
+
+      {/* <Grid/> */}
+
+      {/* <ClassComponent/> */}
+
+      {/* <UseEffectHook/> */}
+
+      {/* <HideShowToggle/> */}
+
+      <Loader/>
 
 
     </View>
