@@ -12,7 +12,9 @@ import React from 'react'
 // import ClassComponent from './src/components/classComponent'
 // import UseEffectHook from './src/components/useEffectHook'
 // import HideShowToggle from './src/components/hideShowToggle'
-import Loader from './src/components/loader'
+// import Loader from './src/components/loader'
+// import UseRefHook from './src/components/useRefHook'
+import ModalDialogBox from './src/components/modalDialogBox'
 
 const App = () => {
 
@@ -53,7 +55,13 @@ const App = () => {
 
       {/* <HideShowToggle/> */}
 
-      <Loader/>
+      {/* <Loader/> */}
+
+      {/* <UseRefHook/> */}
+
+      <ModalDialogBox />
+
+
 
 
     </View>

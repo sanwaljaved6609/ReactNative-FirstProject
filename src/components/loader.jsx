@@ -1,12 +1,31 @@
-import { View, Text, TouchableOpacity, ActivityIndicator, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, ActivityIndicator, StyleSheet, Pressable, Alert, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 
 const Loader = () => {
 
     const [loader, setLoader] = useState(true)
+
+    function handlePressIn(){
+      Alert.alert("Success", "On Press In", [{title:"OK"}])
+    }
+    function handlePressOut(){
+      Alert.alert("Success", "On Press Out", [{title:"OK"}])
+    }
+    function handleLongPress(){
+      Alert.alert("Success", "On Long Press", [{title:"OK"}])
+    }
+
+
   return (
     <View style={styles.container}>
       {/* <Text style={{fontSize:30, marginVertical:20, textAlign:'center'}}>Loader</Text> */}
+
+      <StatusBar
+      barStyle={'dark-content'}
+      backgroundColor="red"
+      hidden={true}
+      translucent={true}
+      />
 
       <TouchableOpacity style={{alignItems:'center'}}>
         {loader && (
@@ -26,6 +45,17 @@ const Loader = () => {
           {loader ? 'Hide Loader' : 'Show Loader'}
         </Text>
       </TouchableOpacity>
+
+      <Pressable 
+      style={styles.button} 
+      // onPressIn={handlePressIn}
+      // onPressOut={handlePressOut}
+      onLongPress={handleLongPress}
+      delayLongPress={2000}
+      >
+        <Text style={styles.buttonText}>PressAble</Text>
+      </Pressable>
+
     </View>
   )
 }
@@ -44,6 +74,7 @@ const styles = StyleSheet.create({
     margin: 20,
     height: 60,
     borderRadius: 20,
+    elevation:5
   },
   buttonText: {
     fontSize: 20,
